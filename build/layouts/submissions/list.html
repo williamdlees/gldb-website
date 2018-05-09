@@ -1,0 +1,59 @@
+{{ partial "header.html" . }}
+
+<div class="row">
+	<div class="col-sm-8 doc-main">
+		<main role="main">
+			<div class="doc-list-header">
+				<h3>Submissions</h3>
+			</div>
+			<div class="doc-list-entry">
+			<table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Id</th>
+                <th scope="col">Submitter</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+	{{ range .Data.Pages }}
+				<tr>
+                <td>
+                <a class="doc-entry" href="{{ .RelPermalink }}">
+					<span class="doc-entry">
+						<time datetime="{{ .Date.Format "02-Jan-2006" }}">{{ .Date.Format "January 02, 2006" }}</time>
+					</span>
+				</a>
+                </td>
+                <td>
+                <a class="doc-entry" href="{{ .RelPermalink }}">
+					<span class="doc-entry">
+						{{.Params.content.Submission.submission_id}}
+					</span>
+				</a>
+                </td>
+                <td>
+                <a class="doc-entry" href="{{ .RelPermalink }}">
+					<span class="doc-entry">
+						{{.Params.content.Submission.submitter_name}}
+					</span>
+				</a>
+                </td>
+                <td>
+                <a class="doc-entry" href="{{ .RelPermalink }}">
+					<span class="doc-entry">
+						{{.Params.content.Submission.submission_status}}
+					</span>
+				</a>
+                </td>
+                </tr>
+	{{ end }}
+			</tbody>
+            </table>
+			</div>
+		</main>
+	</div> <!-- /.doc-main -->
+</div> <!-- /.row -->
+
+{{ partial "footer.html" . }}

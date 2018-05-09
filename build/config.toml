@@ -1,0 +1,28 @@
+baseurl   = "http://your-domain.org"
+title     = "AIRR Inferred Germline Database"
+theme     = "bootie-docs"
+copyright = "Copyright (c) 2018, AIRR Community; All rights reserved."
+
+[params]
+  description    = "AIRR Inferred Germline Database."
+  withSitePosts  = false
+  searchDomain   = "your-domain.org"
+  noCategoryLink = true
+  #repositoryUrl  = "http://your-repository-url"
+  highlightStyle = "github"
+
+[[menu.main]]
+  name   = "Sequences"
+  url    = "/sequences/"
+  weight = 100
+
+[[menu.main]]
+  name   = "Submissions"
+  url    = "/submissions/"
+  weight = 200
+
+[[menu.main]]
+  name   = "Meetings"
+  url    = "/meetings/"
+  weight = 300
+  
