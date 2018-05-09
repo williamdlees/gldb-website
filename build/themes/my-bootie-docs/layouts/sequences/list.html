@@ -1,0 +1,59 @@
+{{ partial "header.html" . }}
+
+<div class="row">
+	<div class="col-sm-8 doc-main">
+		<main role="main">
+			<div class="doc-list-header">
+				<h3>Inferred Sequences</h3>
+			</div>
+			<div class="doc-list-entry">  
+			<table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Sequence</th>
+                <th scope="col">Last Revision</th>
+                <th scope="col">Affirmation Level</th>
+                <th scope="col">Author</th>
+              </tr>
+            </thead>
+            <tbody>
+	{{ range .Data.Pages }}
+				<tr>
+                </td>
+                <td>
+                <a class="doc-entry" href="{{ .RelPermalink }}">
+					<span class="doc-entry">
+						{{.Params.content.Sequence.gene_name}}
+					</span>
+				</a>
+                </td>
+                <td>
+                <a class="doc-entry" href="{{ .RelPermalink }}">
+					<span class="doc-entry">
+						<time datetime="{{ .Date.Format "02-Jan-2006" }}">{{ .Date.Format "January 02, 2006" }}</time>
+					</span>
+				</a>
+                <td>
+                <a class="doc-entry" href="{{ .RelPermalink }}">
+					<span class="doc-entry">
+						{{.Params.content.Sequence.affirmation_level}}
+					</span>
+				</a>
+                </td>
+                <td>
+                <a class="doc-entry" href="{{ .RelPermalink }}">
+					<span class="doc-entry">
+						{{.Params.content.Sequence.author}}
+					</span>
+				</a>
+                </td>
+                </tr>
+	{{ end }}
+			</tbody>
+            </table>
+			</div>
+		</main>
+	</div> <!-- /.doc-main -->
+</div> <!-- /.row -->
+
+{{ partial "footer.html" . }}

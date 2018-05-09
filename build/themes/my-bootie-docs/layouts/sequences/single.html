@@ -1,0 +1,98 @@
+{{ partial "header.html" . }}
+
+<div class="row">
+    <div class="col-sm-12 doc-main"> 
+        <main role="main">
+            <div class="container-fluid">
+                <div class="col-sm-4">
+                <h3>Sequence {{.Params.content.Sequence.gene_name}} </h3>
+                </div>
+                <div class="col-sm-8">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#sequence" aria-controls="sequence" role="tab" data-toggle="tab">Sequence</a></li>
+                        <li role="presentation"><a href="#detail" aria-controls="detail" role="tab" data-toggle="tab">Detail</a></li>
+                        <li role="presentation"><a href="#submissions" aria-controls="submissions" role="tab" data-toggle="tab">Submissions</a></li>
+                        <li role="presentation"><a href="#meetings" aria-controls="meetings" role="tab" data-toggle="tab">Meetings</a></li>
+                        <li role="presentation"><a href="#notes" aria-controls="notes" role="tab" data-toggle="tab">Notes</a></li>
+                    </ul>    
+                </div>
+            </div>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="sequence">
+                    <h4>Inferred Sequence</h4>
+                    <i>Full Sequence</i>
+                    <pre>{{ safeHTML .Params.content.fmt_raw}}</pre>
+                    {{ if .Params.content.fmt_imgt}}
+                        <i>Coding Region</i>
+                        <pre>{{ safeHTML .Params.content.fmt_imgt}}</pre>
+                    {{end}}
+                </div>
+                <div role="tabpanel" class="tab-pane" id="detail">
+                    <h4>Sequence Detail</h4>
+                    <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Field</th>
+                        <th scope="col">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {{ $data :=.Params.content.Sequence }}
+                        {{ range $element := .Params.content.Sequence_order }}
+                        <tr><td>{{ $element }}</td><td>{{ safeHTML (index $data $element) }}</td></tr>
+                        {{ end }}
+                    </tbody></table>	
+                </div>
+                <div role="tabpanel" class="tab-pane" id="submissions">
+                    <h4>Related Submissions</h4>
+                    <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Submission ID</th>
+                        <th scope="col">Gene Name in Submission</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {{ range $element := .Params.content.Submissions }}
+                        <tr>
+                        <td><a href='{{ index $element "url" }}'>{{index $element "id"}}</a></td>
+                        <td><a href='{{ index $element "url" }}'>{{ index $element "name"}}</a></td>
+                        </tr>
+                        {{ end }}                                         
+                    </tbody>
+                    </table>			    
+                </div>
+                <div role="tabpanel" class="tab-pane" id="meetings">
+                    <h4>Related IARC Meetings</h4>
+                    <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Meeting ID</th>
+                        <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{ range $element := .Params.content.Meetings }}
+                        <tr>
+                        <td><a href='{{ index $element "url" }}'>{{index $element "id"}}</a></td>
+                        <td><a href='{{ index $element "url" }}'>{{ index $element "date"}}</a></td>
+                        <tr>
+                        {{ end }}                                    
+                    </tbody>
+                    </table>			
+                </div>
+                <div role="tabpanel" class="tab-pane" id="notes">
+                    <h4>Notes</h4>
+                    {{ range $element := .Params.content.Notes }}
+                    <p>{{ $element }}</p>
+                    {{ end }}
+                </div>
+            </div>
+        </main>
+    </div>  <!-- /.tab-content -->                            
+</div> <!-- /.row -->
+                  
+{{ partial "footer.html" . }}
+
+
+

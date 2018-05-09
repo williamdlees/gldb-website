@@ -1,6 +1,6 @@
 baseurl   = "https://williamdlees.github.io/gldb-website/"
 title     = "AIRR Inferred Germline Database"
-theme     = "bootie-docs"
+theme     = "my-bootie-docs"
 copyright = "Copyright (c) 2018, AIRR Community; All rights reserved."
 publishdir = "../docs"
 

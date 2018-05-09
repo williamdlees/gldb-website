@@ -1,0 +1,132 @@
+{{ partial "header.html" . }}
+
+<div class="row">
+    <div class="col-sm-8 doc-main"> 
+        <main role="main">
+            <div class="container-fluid">
+                <div class="col-sm-2">
+                <h3>Submission {{.Params.content.Submission.submission_id}} </h3>
+                </div>
+                <div class="col-sm-10">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#details" aria-controls="details" role="tab" data-toggle="tab">Details</a></li>
+                    <li role="presentation"><a href="#repertoire" aria-controls="repertoire" role="tab" data-toggle="tab">Repertoire</a></li>
+                    <li role="presentation"><a href="#inferences" aria-controls="inferences" role="tab" data-toggle="tab">Inferences</a></li>
+                    <li role="presentation"><a href="#genotypes" aria-controls="genotypes" role="tab" data-toggle="tab">Genotypes</a></li>
+                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Tool Settings</a></li>
+                    <li role="presentation"><a href="#IARC_tracking" aria-controls="IARC_tracking" role="tab" data-toggle="tab">IARC Tracking</a></li>
+                </ul>    
+                </div>
+            </div>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="details">
+                    <h4>Submission Details</h4>
+                    <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Field</th>
+                        <th scope="col">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {{ $data :=.Params.content.Submission }}
+                        {{ range $element := .Params.content.Submission_order }}
+                        <tr><td>{{ $element }}</td><td>{{ index $data $element }}</td></tr>
+                        {{ end }}
+                    </tbody></table>			
+                </div>
+                <div role="tabpanel" class="tab-pane" id="repertoire">
+                    <h4>Repertoire</h4>
+                    <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Repertoire</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {{ $data :=.Params.content.Repertoire }}
+                        {{ range $element := .Params.content.Repertoire_order }}
+                        <tr><td>{{ $element }}</td><td>{{ safeHTML (index $data $element) }}</td></tr>
+                        {{ end }}                                    
+                    </tbody>
+                    </table>			
+                </div>
+                <div role="tabpanel" class="tab-pane" id="inferences">
+                    <h4>Inferences</h4>
+                    {{ $data := .Params.content }}
+                    {{ range $table := .Params.content.Inference_list }}
+                    <h4>{{ $table }}</h4>
+                    <table class="table table-condensed">
+                    <thead>
+                        {{ range $head := $data.Inference_head }}
+                        <th scope="col">{{ $head }}</th>
+                        {{ end }}
+                    </thead>
+                    <tbody>
+                        {{ range $row := index $data.Inferences (lower $table) }}
+                        <tr>
+                        {{ range $head := $data.Inference_head }}
+                            <td>{{ index $row $head }}</td>
+                        {{ end }}
+                        </tr>
+                        {{ end }}
+                    </tbody>
+                    </table>	
+                    {{ end }}
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="genotypes">
+                    <h4>Genotypes</h4>
+                    {{ $data := .Params.content }}
+                    {{ range $table := .Params.content.Genotype_list }}
+                    <h4>{{ $table }}</h4>
+                    <table class="table table-condensed">
+                    <thead>
+                        {{ range $head := $data.Genotype_head }}
+                        <th scope="col">{{ $head }}</th>
+                        {{ end }}
+                    </thead>
+                    <tbody>
+                        {{ range $row := index $data.Genotype (lower $table) }}
+                        <tr>
+                        {{ range $head := $data.Genotype_head }}
+                            <td>{{ index $row $head }}</td>
+                        {{ end }}
+                        </tr>
+                        {{ end }}
+                    </tbody>
+                    </table>	
+                    {{ end }}
+                </div>
+                <div role="tabpanel" class="tab-pane" id="settings">
+                    <h4>Tool Settings</h4>
+                    <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Field</th>
+                        <th scope="col">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {{ $data :=.Params.content.Tool_Settings }}
+                        {{ range $element := .Params.content.Tool_Settings_order }}
+                        <tr><td>{{ $element }}</td><td>{{ index $data $element }}</td></tr>
+                        {{ end }}
+                    </tbody></table>			
+                </div>
+                <div role="tabpanel" class="tab-pane" id="IARC_tracking">
+                    <h3>IARC Tracking</h3>
+                    <p><i>Notes on IARC review of the submission</i></p>
+                    {{ range $element := .Params.content.IARC_tracking }}
+                    <p>{{ $element }}</p>
+                    {{ end }}
+                </div>
+            </div>
+        </main> 
+    </div>
+</div> <!-- /.row -->
+                  
+{{ partial "footer.html" . }}
+
+
+
