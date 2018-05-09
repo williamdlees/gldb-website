@@ -9,7 +9,7 @@ publishdir = "../docs"
   withSitePosts  = false
   searchDomain   = "https://williamdlees.github.io/gldb-website/"
   noCategoryLink = true
-  #repositoryUrl  = "http://your-repository-url"
+  repositoryUrl  = "https://williamdlees.github.io/gldb-website/"
   highlightStyle = "github"
 
 [[menu.main]]
