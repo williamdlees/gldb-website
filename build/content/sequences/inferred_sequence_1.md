@@ -33,12 +33,12 @@
         "Submissions": [
             {
                 "id": "1",
-                "url": "submissions/iarc_submission_1",
+                "url": "/submissions/iarc_submission_1",
                 "name": "IGHV1-69D*01_C231A"
             },
             {
                 "id": "2",
-                "url": "submissions/iarc_submission_2",
+                "url": "/submissions/iarc_submission_2",
                 "name": "IGHV1-69D*01_003"
             }
         ],

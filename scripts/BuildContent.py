@@ -122,7 +122,7 @@ def create_sequences_content():
             subs = data['Submissions']
             data['Submissions'] = []
             for sub, gene in subs.items():
-                data['Submissions'].append({'id': str(sub), 'url': 'submissions/iarc_submission_%s' % str(sub), 'name': gene})
+                data['Submissions'].append({'id': str(sub), 'url': '/submissions/iarc_submission_%s' % str(sub), 'name': gene})
 
             mtgs = data['Meetings']
             data['Meetings'] = []
