@@ -122,7 +122,7 @@ def create_sequences_content():
             subs = data['Submissions']
             data['Submissions'] = []
             for sub, gene in subs.items():
-                data['Submissions'].append({'id': str(sub), 'url': '/submissions/iarc_submission_%s' % str(sub), 'name': gene})
+                data['Submissions'].append({'id': str(sub), 'url': 'submissions/iarc_submission_%s' % str(sub), 'name': gene})
 
             mtgs = data['Meetings']
             data['Meetings'] = []
@@ -315,7 +315,7 @@ def extract_data_from_submissions():
             continue
 
         sub_data = extract_data_from_sub(base + '/submissions/' + sub)
-        submission_details[sub_data['Submission']['submission_id']] = {'url': '/%s/submissions/%s' % (static, targname), 'date': sub_data['Submission']['submission_date'], 'filename': targname, 'data': sub_data}
+        submission_details[sub_data['Submission']['submission_id']] = {'url': '%s/submissions/%s' % (static, targname), 'date': sub_data['Submission']['submission_date'], 'filename': targname, 'data': sub_data}
         shutil.copyfile(base + '/submissions/' + sub, static + '/submissions/' + targname)
 
 def extract_data_from_sequences():
@@ -342,7 +342,7 @@ def extract_data_from_sequences():
             continue
 
         seq_data = extract_data_from_seq(base + '/sequences/' + seq, minute_details)
-        sequence_details[seq_data['Sequence']['description_id']] = {'url': '/sequences/%s' % targname, 'date': seq_data['Sequence']['release_date'], 'filename': targname, 'data': seq_data, 'affirmation': seq_data['Sequence']['affirmation_level']}
+        sequence_details[seq_data['Sequence']['description_id']] = {'url': 'sequences/%s' % targname, 'date': seq_data['Sequence']['release_date'], 'filename': targname, 'data': seq_data, 'affirmation': seq_data['Sequence']['affirmation_level']}
         shutil.copyfile(base + '/sequences/' + seq, static + '/sequences/' + targname)
 
 
