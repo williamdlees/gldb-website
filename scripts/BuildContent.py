@@ -289,7 +289,7 @@ def extract_data_from_minutes():
             continue
 
         shutil.copyfile(base + '/meetings/' + mn, static + '/meetings/' + targname)
-        minute_details[meetingnum] = {'id': meetingnum, 'url': '%s/meetings/%s' % (static, targname), 'date': date, 'filename': targname}
+        minute_details[meetingnum] = {'id': meetingnum, 'url': '/%s/meetings/%s' % (static, targname), 'date': date, 'filename': targname}
 
 def extract_data_from_submissions():
     global submission_details
