@@ -45,25 +45,25 @@
         "Meetings": [
             {
                 "id": 1,
-                "url": "/build/static/meetings/iarc_meeting_1_12_1_18_minutes.pdf",
+                "url": "build/static/meetings/iarc_meeting_1_12_1_18_minutes.pdf",
                 "date": "2018-01-12",
                 "filename": "iarc_meeting_1_12_1_18_minutes.pdf"
             },
             {
                 "id": 2,
-                "url": "/build/static/meetings/iarc_meeting_2_19_1_18_minutes.pdf",
+                "url": "build/static/meetings/iarc_meeting_2_19_1_18_minutes.pdf",
                 "date": "2018-01-19",
                 "filename": "iarc_meeting_2_19_1_18_minutes.pdf"
             },
             {
                 "id": 3,
-                "url": "/build/static/meetings/iarc_meeting_3_26_1_18_minutes.pdf",
+                "url": "build/static/meetings/iarc_meeting_3_26_1_18_minutes.pdf",
                 "date": "2018-01-26",
                 "filename": "iarc_meeting_3_26_1_18_minutes.pdf"
             },
             {
                 "id": 6,
-                "url": "/build/static/meetings/iarc_meeting_6_2_3_18_minutes.pdf",
+                "url": "build/static/meetings/iarc_meeting_6_2_3_18_minutes.pdf",
                 "date": "2018-03-02",
                 "filename": "iarc_meeting_6_2_3_18_minutes.pdf"
             }

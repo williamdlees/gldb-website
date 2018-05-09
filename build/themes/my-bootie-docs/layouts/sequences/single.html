@@ -73,9 +73,9 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {{ $baseUrl := .Site.BaseURL }} 
                         {{ range $element := .Params.content.Meetings }}
                         <tr>
-                        {{ $baseUrl := .Site.BaseURL }} 
                         <td><a href='{{$baseUrl}}{{index $element "url"}}'>{{index $element "id"}}</a></td>
                         <td><a href='{{$baseUrl}}{{index $element "url"}}'>{{ index $element "date"}}</a></td>
                         <tr>
