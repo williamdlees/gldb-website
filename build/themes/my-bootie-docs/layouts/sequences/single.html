@@ -53,10 +53,11 @@
                       </tr>
                     </thead>
                     <tbody>
+                        {{ $baseUrl := .Site.BaseURL }} 
                         {{ range $element := .Params.content.Submissions }}
                         <tr>
-                        <td><a href='{{.Site.BaseURL}}{{index $element "url"}}'>{{index $element "id"}}</a></td>
-                        <td><a href='{{.Site.BaseURL}}{{index $element "url"}}'>{{ index $element "name"}}</a></td>
+                        <td><a href='{{$baseUrl}}{{index $element "url"}}'>{{index $element "id"}}</a></td>
+                        <td><a href='{{$baseUrl}}{{index $element "url"}}'>{{ index $element "name"}}</a></td>
                         </tr>
                         {{ end }}                                         
                     </tbody>
@@ -74,8 +75,9 @@
                     <tbody>
                         {{ range $element := .Params.content.Meetings }}
                         <tr>
-                        <td><a href='{{.Site.BaseURL}}{{index $element "url"}}'>{{index $element "id"}}</a></td>
-                        <td><a href='{{.Site.BaseURL}}{{index $element "url"}}'>{{ index $element "date"}}</a></td>
+                        {{ $baseUrl := .Site.BaseURL }} 
+                        <td><a href='{{$baseUrl}}{{index $element "url"}}'>{{index $element "id"}}</a></td>
+                        <td><a href='{{$baseUrl}}{{index $element "url"}}'>{{ index $element "date"}}</a></td>
                         <tr>
                         {{ end }}                                    
                     </tbody>
