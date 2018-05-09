@@ -2,6 +2,7 @@ baseurl   = "http://your-domain.org"
 title     = "AIRR Inferred Germline Database"
 theme     = "bootie-docs"
 copyright = "Copyright (c) 2018, AIRR Community; All rights reserved."
+publishdir = "../docs"
 
 [params]
   description    = "AIRR Inferred Germline Database."
