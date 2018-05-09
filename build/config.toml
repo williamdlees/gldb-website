@@ -1,4 +1,4 @@
-baseurl   = "http://your-domain.org"
+baseurl   = "https://williamdlees.github.io/gldb-website/"
 title     = "AIRR Inferred Germline Database"
 theme     = "bootie-docs"
 copyright = "Copyright (c) 2018, AIRR Community; All rights reserved."
@@ -7,7 +7,7 @@ publishdir = "../docs"
 [params]
   description    = "AIRR Inferred Germline Database."
   withSitePosts  = false
-  searchDomain   = "your-domain.org"
+  searchDomain   = "https://williamdlees.github.io/gldb-website/"
   noCategoryLink = true
   #repositoryUrl  = "http://your-repository-url"
   highlightStyle = "github"
