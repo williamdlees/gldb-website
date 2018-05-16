@@ -14,6 +14,7 @@
                     <li role="presentation"><a href="#inferences" aria-controls="inferences" role="tab" data-toggle="tab">Inferences</a></li>
                     <li role="presentation"><a href="#genotypes" aria-controls="genotypes" role="tab" data-toggle="tab">Genotypes</a></li>
                     <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Tool Settings</a></li>
+                    <li role="presentation"><a href="#acknowledgements" aria-controls="acknowledgements" role="tab" data-toggle="tab">Acknowledgements</a></li>
                     <li role="presentation"><a href="#IARC_tracking" aria-controls="IARC_tracking" role="tab" data-toggle="tab">IARC Tracking</a></li>
                 </ul>    
                 </div>
@@ -33,7 +34,12 @@
                         {{ range $element := .Params.content.Submission_order }}
                         <tr><td>{{ $element }}</td><td>{{ index $data $element }}</td></tr>
                         {{ end }}
-                    </tbody></table>			
+                    </tbody></table>
+                    <a class="btn btn-primary" href={{.Params.content.file_url | relURL }}>Download Original</a>
+                    {{ if ne .Params.content.sup_url "" }}
+                        <a class="btn btn-secondary" href={{.Params.content.sup_url | relURL }}>Download Supplementary</a>
+                    {{end}}
+                    
                 </div>
                 <div role="tabpanel" class="tab-pane" id="repertoire">
                     <h4>Repertoire</h4>
@@ -113,6 +119,36 @@
                         <tr><td>{{ $element }}</td><td>{{ index $data $element }}</td></tr>
                         {{ end }}
                     </tbody></table>			
+                </div>
+                <div role="tabpanel" class="tab-pane" id="acknowledgements">
+                    <h4>Acknowledgements</h4>
+                    <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Institution</th>
+                        <th scope="col">ORCID Id</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{ range $element := .Params.content.Acknowledgements }}
+                        <tr>
+                        <td>{{index $element "name"}}</td>
+                        <td>{{ index $element "institution_name"}}</td>
+                        {{ $url := index $element "ORCID_id" }}
+                        {{ if ne $url "" }}
+                            {{ if in $url "http" }}
+                              <td><a href='{{$url}}' target="_blank">ORCID</a></td>
+                            {{ else }}
+                              <td><a href='https://orcid.org/{{$url}}' target="_blank">ORCID</a></td>
+                            {{ end }}
+                        {{ else }}
+                          <td></td>
+                        {{ end }}
+                        <tr>
+                        {{ end }}                                    
+                    </tbody>
+                    </table>			
                 </div>
                 <div role="tabpanel" class="tab-pane" id="IARC_tracking">
                     <h3>IARC Tracking</h3>

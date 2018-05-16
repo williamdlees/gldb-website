@@ -12,6 +12,23 @@
             "species": "Homo sapies",
             "population_ethnicity": "UN"
         },
+        "Acknowledgements": [
+            {
+                "name": "Mel Smyth",
+                "institution_name": "University of Kent",
+                "ORCID_id": "https://orcid.org/0000-0003-1912-3935"
+            },
+            {
+                "name": "Griff Jones",
+                "institution_name": "RMIT University",
+                "ORCID_id": "https://orcid.org/0000-0003-1912-3935"
+            },
+            {
+                "name": "Anthony Minghella",
+                "institution_name": "University of Texas MD Anderson Cancer Center",
+                "ORCID_id": "https://orcid.org/0000-0003-1912-3935"
+            }
+        ],
         "Repertoire": {
             "pub_ids": "<a href=\"https://www.ncbi.nlm.nih.gov/pubmed/?term=24639495\" target=\"_blank\">24639495</a>",
             "repository_name": "ENA",
@@ -1336,6 +1353,8 @@
             "starting_database": "IMGT (onbtained March 2018)  with modifications (see below)",
             "tool_settings": "See settings tab"
         },
+        "file_url": "submissions/iarc_submission_2.xlsx",
+        "sup_url": "",
         "IARC_tracking": [
             " "
         ],

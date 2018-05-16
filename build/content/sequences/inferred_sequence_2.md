@@ -30,6 +30,23 @@
             "observed_sequences": "BN000872.1",
             "genomic_sequences": " "
         },
+        "Acknowledgements": [
+            {
+                "name": "Mel Smyth",
+                "institution_name": "University of Kent",
+                "ORCID_id": "https://orcid.org/0000-0003-1912-3935"
+            },
+            {
+                "name": "Griff Jones",
+                "institution_name": "RMIT University",
+                "ORCID_id": "https://orcid.org/0000-0003-1912-3935"
+            },
+            {
+                "name": "Anthony Minghella",
+                "institution_name": "University of Texas MD Anderson Cancer Center",
+                "ORCID_id": "https://orcid.org/0000-0003-1912-3935"
+            }
+        ],
         "Submissions": [
             {
                 "id": "1",
@@ -68,6 +85,7 @@
                 "filename": "iarc_meeting_6_2_3_18_minutes.pdf"
             }
         ],
+        "file_url": "sequences/inferred_sequence_2.xlsx",
         "Notes": [
             "Lengthier notes on sequence 2",
             "",
@@ -78,6 +96,7 @@
             "From the amino acid sequences of Bence Jones proteins, it is known that all L chains are divided into a region of variable sequence (VL) and one of constant sequence (CL), each comprising about half the length of the L chain. The constant regions of all human L chains of the same type (\u03ba or \u03bb) are identical except for a single amino acid substitution, under genetic controls. H chains are similarly divided, although the VH region, although similar in length to the VL region, is only one third or one fourth the length of the CH region. Binding sites are a combination of VL and VH protein regions. The large number of possible combinations of L and H chains make up the \"libraries\" of antibodies of each individual."
         ],
         "fmt_raw": "1                                               50\ncaggttcagctggtgcagtctggagctgaggtgaagaagcctggggcctc\n\n51                                             100\nagtgaaggtctcctgcaaggcttctggttacacctttaccagctatggta\n\n101                                            150\ntcagctgggtgcgacaggcccctggacaagggcttgagtggatgggatgg\n\n151                                            200\natcagcgcttacaatggtaacacaaactatgcacagaagctccagggcag\n\n201                                            250\nagtcaccatgaccacagacacatccacgagcacagcctacatggagctga\n\n251                                        296\nggagcctgagatctgacgacacggccgtgtattactgtgcgagaga\n\n",
+        "fmt_fa": ">IGHV5-2*02\ncaggttcagctggtgcagtctggagctgaggtgaagaagcctggggcctc\nagtgaaggtctcctgcaaggcttctggttacacctttaccagctatggta\ntcagctgggtgcgacaggcccctggacaagggcttgagtggatgggatgg\natcagcgcttacaatggtaacacaaactatgcacagaagctccagggcag\nagtcaccatgaccacagacacatccacgagcacagcctacatggagctga\nggagcctgagatctgacgacacggccgtgtattactgtgcgagaga\n",
         "fmt_imgt": "                                                                                                    \n 1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25 \n Q   V   Q   L   V   Q   S   G   A       E   V   K   K   P   G   A   S   V   K   V   S   C   K   A  \ncag gtt cag ctg gtg cag tct gga gct ... gag gtg aag aag cct ggg gcc tca gtg aag gtc tcc tgc aag gct \n \n   _____________________CDR1_______________________                                                 \n 26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50 \n S   G   Y   T   F                   T   S   Y   G   I   S   W   V   R   Q   A   P   G   Q   G   L  \ntct ggt tac acc ttt ... ... ... ... acc agc tat ggt atc agc tgg gtg cga cag gcc cct gga caa ggg ctt \n \n                    _________________CDR2___________________                                        \n 51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75 \n E   W   M   G   W   I   S   A   Y           N   G   N   T   N   Y   A   Q   K   L   Q       G   R  \ngag tgg atg gga tgg atc agc gct tac ... ... aat ggt aac aca aac tat gca cag aag ctc cag ... ggc aga \n \n                                                                                                    \n 76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99 100 \n V   T   M   T   T   D   T   S   T   S   T   A   Y   M   E   L   R   S   L   R   S   D   D   T   A  \ngtc acc atg acc aca gac aca tcc acg agc aca gcc tac atg gag ctg agg agc ctg aga tct gac gac acg gcc \n \n                 _CDR3_____\n101 102 103 104 105 106    \n V   Y   Y   C   A   R     \ngtg tat tac tgt gcg aga ga \n ",
         "Sequence_order": [
             "description_id",

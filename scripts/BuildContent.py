@@ -81,6 +81,9 @@ def create_submissions_content():
         with open('%s/submissions/%s' % (content, rec['filename'].replace('.xlsx', '.md')), 'w', encoding='utf-8') as fo:
             data = rec['data']
 
+            data['file_url'] = rec['url']
+            data['sup_url'] = rec['sup_url']
+
             # turn URLs into clickable links
             pmids = str((int(data['Repertoire']['pub_ids']))).split(',')
 
@@ -118,6 +121,8 @@ def create_sequences_content():
     for(id, rec) in sequence_details.items():
         with open('%s/sequences/%s' % (content, rec['filename'].replace('.xlsx', '.md')), 'w', encoding='utf-8') as fo:
             data = rec['data']
+
+            data['file_url'] = rec['url']
 
             subs = data['Submissions']
             data['Submissions'] = []
@@ -158,6 +163,7 @@ def create_sequences_content():
             #  Sequences formatted for display
 
             data['fmt_raw'] = format_nuc_sequence(data['Sequence']['sequence'], 50)
+            data['fmt_fa'] = format_fasta_sequence(data['Sequence']['gene_name'], data['Sequence']['sequence'], 50)
 
             if 'V' in data['Sequence']['region']:
                 data['fmt_imgt'] = format_imgt_v(data['Sequence']['coding_seq_imgt'], 100)
@@ -169,30 +175,8 @@ def create_sequences_content():
             del data['Sequence']['sequence']
             del data['Sequence']['coding_seq_imgt']
 
-            # Only retain delineation for the relevant gene
-
-#            for gene_type in ['V_gene', 'D_gene', 'J_gene']:
-#                if gene_type[0] not in data['Sequence']['region']:
-#                    del data['Delineation'][gene_type]
-#                    if len(str(data['Sequence']['genomic_sequences']).replace(' ', '')) > 0:
-#                        if gene_type[0] == 'V':
-#                            for field in ['utr_5_prime', 'l_region', 'v_rs']:
-#                                del data['Sequence'][field + '_start']
-#                                del data['Sequence'][field + '_end']
-#                        elif gene_type[0] == 'D':
-#                            for field in ['d_rs_3_prime', 'd_rs_5_prime']:
-#                                del data['Sequence'][field + '_start']
-#                                del data['Sequence'][field + '_end']
-#                        if gene_type[0] == 'J':
-#                            for field in ['j_rs']:
-#                                del data['Sequence'][field + '_start']
-#                                del data['Sequence'][field + '_end']
-
-
             # build lists that allow fields to be displayed in the correct order
             data['Sequence_order'] = list(data['Sequence'].keys())
-#            for gene_type in data['Delineation']:
-#                data['Delineation'][gene_type[0] + '_order'] = list(data['Delineation']['V_gene'].keys())
             fo.write(json.dumps({'date': rec['date'], 'file_url': rec['url'], 'content': rec['data']}, indent=4, sort_keys=False, default=str))
 
 def addressify(url, name):
@@ -213,6 +197,14 @@ def format_nuc_sequence(seq, width):
             ret += ' '*(len(frag)-10) + '%5d' % (ind + len(frag) - 1)
         ind += len(frag)
         ret += '\n' + frag + '\n\n'
+
+    return ret
+
+def format_fasta_sequence(name, seq, width):
+    ret = '>' + name + '\n'
+
+    for frag in chunks(seq, width):
+        ret += frag + '\n'
 
     return ret
 
@@ -299,24 +291,33 @@ def extract_data_from_submissions():
     # Filename format must be 'iarc_submission_<number>.xlsx'
     subs = get_files_in_dir(base + '/submissions', '.xlsx')
     for sub in subs:
-        fn = sub.replace(' ', '_')
-        while('__') in fn:
-            fn = fn.replace('__', '_')
-        targname = fn.lower()
-        fn = fn.replace('.xlsx', '')
-        fn = fn.split('_')
-        if len(fn) != 3:
-            print('%s/submissions/%s: filename does not follow correct format.' % (base, mn))
-            continue
-        try:
-            subnum = int(fn[2])
-        except ValueError:
-            print('%s/submissions/%s: filename does not follow correct format.' % (base, mn))
-            continue
+        if 'supplementary' not in sub:
+            fn = sub.replace(' ', '_')
+            while('__') in fn:
+                fn = fn.replace('__', '_')
+            targname = fn.lower()
+            fn = fn.replace('.xlsx', '')
+            fn = fn.split('_')
+            if len(fn) != 3:
+                print('%s/submissions/%s: filename does not follow correct format.' % (base, mn))
+                continue
+            try:
+                subnum = int(fn[2])
+            except ValueError:
+                print('%s/submissions/%s: filename does not follow correct format.' % (base, mn))
+                continue
 
-        sub_data = extract_data_from_sub(base + '/submissions/' + sub)
-        submission_details[sub_data['Submission']['submission_id']] = {'url': '%s/submissions/%s' % (static, targname), 'date': sub_data['Submission']['submission_date'], 'filename': targname, 'data': sub_data}
-        shutil.copyfile(base + '/submissions/' + sub, static + '/submissions/' + targname)
+            # check for supplementary data file
+            supfiles = get_files_in_dir(base + '/submissions', targname.split('.')[0] + '_supplementary')
+            if len(supfiles) > 0:
+                sup_url = 'submissions/%s' % supfiles[0]
+                shutil.copyfile(base + '/submissions/' + supfiles[0], static + '/submissions/' + supfiles[0])
+            else:
+                sup_url = ""   # zip if more than one file
+
+            sub_data = extract_data_from_sub(base + '/submissions/' + sub)
+            submission_details[sub_data['Submission']['submission_id']] = {'url': 'submissions/%s' % targname, 'sup_url': sup_url, 'date': sub_data['Submission']['submission_date'], 'filename': targname, 'data': sub_data}
+            shutil.copyfile(base + '/submissions/' + sub, static + '/submissions/' + targname)
 
 def extract_data_from_sequences():
     global sequence_details
@@ -350,6 +351,7 @@ def extract_data_from_sub(filename):
     wb = load_workbook(filename)
     data = {}
     data['Submission'] = extract_vert_table(wb, 'Submission', 'Field', 'Response', filename)
+    data['Acknowledgements'] = extract_horiz_table(wb, 'Submission', 'name', filename)
     data['Repertoire'] = extract_vert_table(wb, 'Repertoire', 'Field', 'Response', filename)
     data['Inferences'] = extract_horiz_table(wb, 'Inferences', 'sequence_id', filename)
     data['Inference_list'] = list(data['Inferences'].keys())
@@ -364,6 +366,7 @@ def extract_data_from_seq(filename, minute_details):
     wb = load_workbook(filename)
     data = {}
     data['Sequence'] = extract_vert_table(wb, 'Sequence', 'Field', 'Response', filename)
+    data['Acknowledgements'] = extract_horiz_table(wb, 'Sequence', 'name', filename)
 #    data['Delineation'] = extract_vert_tables(wb, 'Delineation', 'Field', 'Response', filename)
     data['Submissions'] = extract_vert_table(wb, 'Submissions', 'Submission ID', 'Sequence ID', filename)
     data['Meetings'] = extract_list(wb, 'Meetings', 'Meeting Number', filename)
@@ -513,7 +516,10 @@ def extract_horiz_table(wb, tabname, keyname, filename):
         if recording:
             if cell is None or cell.value is None or len(cell.value) == 0 or len(cell.value.replace(" ", '')) == 0:
                 if len(table) > 0:
-                    res['Sub_%s_Gen_%s' % (str(sub_id), str(gen_id))] = table
+                    if sub_id and gen_id:
+                        res['Sub_%s_Gen_%s' % (str(sub_id), str(gen_id))] = table
+                    else:
+                        res = table
                 table = None
                 sub_id = None
                 gen_id = None
@@ -535,7 +541,7 @@ def extract_horiz_table(wb, tabname, keyname, filename):
         elif cell.value != None and 'genotype id' in cell.value.lower():
             val = get_value_to_right(ws, cell)
             gen_id = val if val != None else next(gen_ind)
-        elif cell.value != None and keyname in cell.value and sub_id != None and gen_id != None:
+        elif cell.value != None and keyname in cell.value:
             keys = []
             for rcell in ws[cell.row]:
                 if column_index_from_string(rcell.column) >= column_index_from_string(cell.column):

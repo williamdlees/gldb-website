@@ -13,6 +13,7 @@
                         <li role="presentation"><a href="#detail" aria-controls="detail" role="tab" data-toggle="tab">Detail</a></li>
                         <li role="presentation"><a href="#submissions" aria-controls="submissions" role="tab" data-toggle="tab">Submissions</a></li>
                         <li role="presentation"><a href="#meetings" aria-controls="meetings" role="tab" data-toggle="tab">Meetings</a></li>
+                        <li role="presentation"><a href="#acknowledgements" aria-controls="acknowledgements" role="tab" data-toggle="tab">Acknowledgements</a></li>
                         <li role="presentation"><a href="#notes" aria-controls="notes" role="tab" data-toggle="tab">Notes</a></li>
                     </ul>    
                 </div>
@@ -21,6 +22,7 @@
                 <div role="tabpanel" class="tab-pane active" id="sequence">
                     <h4>Inferred Sequence</h4>
                     <i>Full Sequence</i>
+                    <a class="btn btn-secondary" href="data:application/octet-stream;charset=utf-8,{{.Params.content.fmt_fa}}" download="sequence.fa">download</a>
                     <pre>{{ safeHTML .Params.content.fmt_raw}}</pre>
                     {{ if .Params.content.fmt_imgt}}
                         <i>Coding Region</i>
@@ -42,6 +44,7 @@
                         <tr><td>{{ $element }}</td><td>{{ safeHTML (index $data $element) }}</td></tr>
                         {{ end }}
                     </tbody></table>	
+                    <a class="btn btn-primary" href={{.Params.content.file_url | relURL }}>Download Original</a>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="submissions">
                     <h4>Related Submissions</h4>
@@ -78,6 +81,36 @@
                         <tr>
                         <td><a href='{{$baseUrl}}{{index $element "url"}}'>{{index $element "id"}}</a></td>
                         <td><a href='{{$baseUrl}}{{index $element "url"}}'>{{ index $element "date"}}</a></td>
+                        <tr>
+                        {{ end }}                                    
+                    </tbody>
+                    </table>			
+                </div>
+                <div role="tabpanel" class="tab-pane" id="acknowledgements">
+                    <h4>Acknowledgements</h4>
+                    <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Institution</th>
+                        <th scope="col">ORCID Id</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{ range $element := .Params.content.Acknowledgements }}
+                        <tr>
+                        <td>{{index $element "name"}}</td>
+                        <td>{{ index $element "institution_name"}}</td>
+                        {{ $url := index $element "ORCID_id" }}
+                        {{ if ne $url "" }}
+                            {{ if in $url "http" }}
+                              <td><a href='{{$url}}' target="_blank">ORCID</a></td>
+                            {{ else }}
+                              <td><a href='https://orcid.org/{{$url}}' target="_blank">ORCID</a></td>
+                            {{ end }}
+                        {{ else }}
+                          <td></td>
+                        {{ end }}
                         <tr>
                         {{ end }}                                    
                     </tbody>
