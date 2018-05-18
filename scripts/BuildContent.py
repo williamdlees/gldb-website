@@ -49,9 +49,6 @@ submission_details = {}
 sequence_details = {}
 
 def main(argv):
-    # Start with a clean slate
-    makempty(content)
-
     # Extract data from source files, and copy source files into static
     extract_data_from_minutes()
     extract_data_from_submissions()
