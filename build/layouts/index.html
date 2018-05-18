@@ -1,0 +1,28 @@
+{{ $baseUrl := .Site.BaseURL }}
+{{ partial "header.html" . }}
+
+
+<div class="row">
+  <div class="jumbotron">
+	<h1>{{ .Site.Title }}</h1>
+    {{ with .Site.GetPage "section" "posts" }}
+      <p>{{.Content}}</p>
+    {{end}}
+  </div>
+
+
+<div class="row">
+  <div class="col-sm-8 doc-main"> 
+    <ul class="contents">
+    <h2>News</h2>
+    {{ range where .Data.Pages "Section" "posts" }}
+      <h3>{{dateFormat "Jan 2, 2006" .Date}} - {{.Title}}</h3>
+      {{.Content}}
+    {{end}}
+    </ul>
+  </div>
+</div>
+
+
+
+{{ partial "footer.html" . }}

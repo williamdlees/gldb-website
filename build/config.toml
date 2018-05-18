@@ -12,7 +12,7 @@ publishdir = "../docs"
   repositoryUrl  = "https://williamdlees.github.io/gldb-website/"
   highlightStyle = "github"
 
-[[menu.main]]
+  [[menu.main]]
   name   = "Sequences"
   url    = "/sequences/"
   weight = 100
