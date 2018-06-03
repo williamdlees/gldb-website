@@ -71,8 +71,7 @@
             "read_length": "325 (read 1) + 300 (read 2)",
             "forward_primer_set": "sample-indexed Illumina P7C7 primer",
             "reverse_primer_set": "primers targeting the IGHA, IGHD, IGHE, IGHG, IGHM, IGKC and IGLC regions",
-            "notes": "Inferrences were performed on sequences from all samples of subject IB (SRR4431764-73)  in study PRJNA349143. Each sample were processed separately using pRESTO 0.5.4, and sequences containing AGGGAGTGCATCC were extracted as IgM seequences. The IgM sequences of each sample were collected into one fasta file, which subsequently was use to perform IgDiscover analysis.",
-            "IARC_repertoire_id": " "
+            "notes": "Inferrences were performed on sequences from all samples of subject IB (SRR4431764-73)  in study PRJNA349143. Each sample were processed separately using pRESTO 0.5.4, and sequences containing AGGGAGTGCATCC were extracted as IgM seequences. The IgM sequences of each sample were collected into one fasta file, which subsequently was use to perform IgDiscover analysis."
         },
         "Inferences": {
             "Sub_1_Gen_1": [
@@ -135,7 +134,6 @@
             "Sub_1_Gen_1": [
                 {
                     "sequence_id": "IGHV1-18*01",
-                    "subject_id": "IB",
                     "sequences": 6893,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -156,7 +154,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-2*02",
-                    "subject_id": "IB",
                     "sequences": 8218,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -177,7 +174,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-2*04",
-                    "subject_id": "IB",
                     "sequences": 1959,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -198,7 +194,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-24*01",
-                    "subject_id": "IB",
                     "sequences": 2548,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -219,7 +214,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-3*01",
-                    "subject_id": "IB",
                     "sequences": 2147,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -240,7 +234,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-45*02",
-                    "subject_id": "IB",
                     "sequences": 22,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -261,7 +254,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-46*01",
-                    "subject_id": "IB",
                     "sequences": 4270,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -282,7 +274,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-58*02",
-                    "subject_id": "IB",
                     "sequences": 666,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -303,7 +294,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-69*01",
-                    "subject_id": "IB",
                     "sequences": 9476,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -324,7 +314,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-69*02",
-                    "subject_id": "IB",
                     "sequences": 3896,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -345,7 +334,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-69*06",
-                    "subject_id": "IB",
                     "sequences": 6408,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -366,7 +354,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-69-2*01",
-                    "subject_id": "IB",
                     "sequences": 465,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -387,7 +374,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-8*01",
-                    "subject_id": "IB",
                     "sequences": 5184,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -408,7 +394,6 @@
                 },
                 {
                     "sequence_id": "IGHV2-26*01",
-                    "subject_id": "IB",
                     "sequences": 3183,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -429,7 +414,6 @@
                 },
                 {
                     "sequence_id": "IGHV2-5*01",
-                    "subject_id": "IB",
                     "sequences": 2570,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -450,7 +434,6 @@
                 },
                 {
                     "sequence_id": "IGHV2-5*02",
-                    "subject_id": "IB",
                     "sequences": 3252,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -471,7 +454,6 @@
                 },
                 {
                     "sequence_id": "IGHV2-70*01",
-                    "subject_id": "IB",
                     "sequences": 376,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -492,7 +474,6 @@
                 },
                 {
                     "sequence_id": "IGHV2-70D*04",
-                    "subject_id": "IB",
                     "sequences": 264,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -513,7 +494,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-11*01",
-                    "subject_id": "IB",
                     "sequences": 2718,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -534,7 +514,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-11*05",
-                    "subject_id": "IB",
                     "sequences": 2514,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -555,7 +534,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-13*01",
-                    "subject_id": "IB",
                     "sequences": 879,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -576,7 +554,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-13*04",
-                    "subject_id": "IB",
                     "sequences": 1124,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -597,7 +574,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-15*01",
-                    "subject_id": "IB",
                     "sequences": 7714,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -618,7 +594,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-20*01",
-                    "subject_id": "IB",
                     "sequences": 761,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -639,7 +614,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-21*01",
-                    "subject_id": "IB",
                     "sequences": 13697,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -660,7 +634,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-23*01",
-                    "subject_id": "IB",
                     "sequences": 39006,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -681,7 +654,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-30*18",
-                    "subject_id": "IB",
                     "sequences": 9552,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -702,7 +674,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-33*01",
-                    "subject_id": "IB",
                     "sequences": 15659,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -723,7 +694,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-43*01",
-                    "subject_id": "IB",
                     "sequences": 393,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -744,7 +714,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-48*02",
-                    "subject_id": "IB",
                     "sequences": 4692,
                     "closest_reference": null,
                     "closest_host": null,
@@ -765,7 +734,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-48*03",
-                    "subject_id": "IB",
                     "sequences": 7506,
                     "closest_reference": null,
                     "closest_host": null,
@@ -786,7 +754,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-49*03",
-                    "subject_id": "IB",
                     "sequences": 1651,
                     "closest_reference": null,
                     "closest_host": null,
@@ -807,7 +774,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-49*04",
-                    "subject_id": "IB",
                     "sequences": 1765,
                     "closest_reference": null,
                     "closest_host": null,
@@ -828,7 +794,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-53*02",
-                    "subject_id": "IB",
                     "sequences": 1435,
                     "closest_reference": null,
                     "closest_host": null,
@@ -849,7 +814,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-53*04",
-                    "subject_id": "IB",
                     "sequences": 1411,
                     "closest_reference": null,
                     "closest_host": null,
@@ -870,7 +834,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-64*01",
-                    "subject_id": "IB",
                     "sequences": 1102,
                     "closest_reference": null,
                     "closest_host": null,
@@ -891,7 +854,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-64D*06",
-                    "subject_id": "IB",
                     "sequences": 1535,
                     "closest_reference": null,
                     "closest_host": null,
@@ -912,7 +874,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-66*02",
-                    "subject_id": "IB",
                     "sequences": 2450,
                     "closest_reference": null,
                     "closest_host": null,
@@ -933,7 +894,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-7*01",
-                    "subject_id": "IB",
                     "sequences": 4081,
                     "closest_reference": null,
                     "closest_host": null,
@@ -954,7 +914,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-72*01",
-                    "subject_id": "IB",
                     "sequences": 668,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -975,7 +934,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-73*01",
-                    "subject_id": "IB",
                     "sequences": 828,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -996,7 +954,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-73*02",
-                    "subject_id": "IB",
                     "sequences": 1046,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1017,7 +974,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-74*01",
-                    "subject_id": "IB",
                     "sequences": 5787,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1038,7 +994,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-9*01",
-                    "subject_id": "IB",
                     "sequences": 6033,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1059,7 +1014,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-28*01",
-                    "subject_id": "IB",
                     "sequences": 24,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1080,7 +1034,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-31*03",
-                    "subject_id": "IB",
                     "sequences": 7426,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1101,7 +1054,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-34*01",
-                    "subject_id": "IB",
                     "sequences": 22622,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1122,7 +1074,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-38-2*01",
-                    "subject_id": "IB",
                     "sequences": 4222,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1143,7 +1094,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-39*01",
-                    "subject_id": "IB",
                     "sequences": 12319,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1164,7 +1114,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-4*02",
-                    "subject_id": "IB",
                     "sequences": 2296,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1185,7 +1134,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-4*07",
-                    "subject_id": "IB",
                     "sequences": 2833,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1206,7 +1154,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-59*01",
-                    "subject_id": "IB",
                     "sequences": 8247,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1227,7 +1174,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-59*08",
-                    "subject_id": "IB",
                     "sequences": 3595,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1248,7 +1194,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-61*02",
-                    "subject_id": "IB",
                     "sequences": 7634,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1269,7 +1214,6 @@
                 },
                 {
                     "sequence_id": "IGHV5-10-1*01",
-                    "subject_id": "IB",
                     "sequences": 1669,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1290,7 +1234,6 @@
                 },
                 {
                     "sequence_id": "IGHV5-51*01",
-                    "subject_id": "IB",
                     "sequences": 3206,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1311,7 +1254,6 @@
                 },
                 {
                     "sequence_id": "IGHV5-51*03",
-                    "subject_id": "IB",
                     "sequences": 1843,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1332,7 +1274,6 @@
                 },
                 {
                     "sequence_id": "IGHV6-1*01",
-                    "subject_id": "IB",
                     "sequences": 2135,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1353,7 +1294,6 @@
                 },
                 {
                     "sequence_id": "IGHV7-4-1*01",
-                    "subject_id": "IB",
                     "sequences": 49,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1371,6 +1311,26 @@
                     "haplotyping_locus": "Haplotyping not possible",
                     "haplotyping_ratio": " ",
                     "nt_sequence": "CAGGTGCAGCTGGTGCAATCTGGGTCTGAGTTGAAGAAGCCTGGGGCCTCAGTGAAGGTTTCCTGCAAGGCTTCTGGATACACCTTCACTAGCTATGCTATGAATTGGGTGCGACAGGCCCCTGGACAAGGGCTTGAGTGGATGGGATGGATCAACACCAACACTGGGAACCCAACGTATGCCCAGGGCTTCACAGGACGGTTTGTCTTCTCCTTGGACACCTCTGTCAGCACGGCATATCTGCAGATCTGCAGCCTAAAGGCTGAGGACACTGCCGTGTATTACTGTGCGAGA"
+                },
+                {
+                    "sequence_id": "'Reference genes and alleles' - this is the set of genes and\nalleles provided to the inference tool.",
+                    "sequences": null,
+                    "closest_reference": null,
+                    "closest_host": null,
+                    "nt_diff": null,
+                    "nt_substitutions": null,
+                    "aa_diff": null,
+                    "aa_substitutions": null,
+                    "unmutated_frequency": null,
+                    "unmutated_sequences": null,
+                    "unmutated_umis": null,
+                    "allelic_percentage": null,
+                    "unique_ds": null,
+                    "unique_js": null,
+                    "unique_cdr3s": null,
+                    "haplotyping_locus": null,
+                    "haplotyping_ratio": null,
+                    "nt_sequence": null
                 }
             ]
         },
@@ -1378,10 +1338,12 @@
             "Sub_1_Gen_1"
         ],
         "Tool_Settings": {
-            "tool_name": "IgDiscover",
-            "tool_version": 0.9,
-            "starting_database": "IMGT (onbtained March 2018)  with modifications (see below)",
-            "tool_settings": "See settings tab"
+            "IgDiscover": {
+                "tool_name": "IgDiscover",
+                "tool_version": 0.9,
+                "starting_database": "IMGT (onbtained March 2018)  with modifications (see below)",
+                "tool_settings": "# Type of sequences: Choose 'Ig' or 'TCR'.\n#\nsequence_type: Ig\n\n\n## Barcoding settings\n\n\n# If you have a random barcode sequence (unique molecular identifier) at the 5' end,\n# set this to its length. Leave at 0 when you have no 5' barcode.\n#\nbarcode_length_5prime: 0\n\n\n# Same as above, but for the 3' end of the sequence. Leave at 0 when you have no 3' barcode.\n# Currently, you cannot have a barcode in both ends, so at least one of the two settings\n# must be zero.\n#\nbarcode_length_3prime: 0\n\n\n# When barcoding is enabled, sequences that have identical barcode and CDR3 are\n# collapsed into a single consensus sequence.\n# If you set this to false, no collapsing and consensus taking is done and\n# only the barcode is removed from each sequence.\n#\nbarcode_consensus: true\n\n\n# When grouping by barcode and CDR3, the CDR3 location is either detected with a\n# regular expressions or a 'pseudo' CDR3 sequence is used, which is at a\n# pre-defined position within the sequence.\n#\n# Set this configuration option to a region like [-80, -60] to use a pseudo\n# CDR3 located at bases 80 to 60 counted from the 3' end. (Use negative numbers to\n# count from the 3' end, positive ones to count from the 5' end. The most 5'\n# base has index 0.)\n#\n# Set this to 'detect' (with quotation marks) in order to use CDR3s\n# detected by regular expression. This assumes that the input contains\n# VH sequences!\n#\n# Set this to false (no quotation marks) in order to *only* group by barcode, not by CDR3.\n#\ncdr3_location: 'detect'\u00a0 # Works only with VH sequences!\n\n\n# When you use a RACE protocol, then the sequences have a run of G nucleotides in the beginning\n# which need to be removed when barcodes are used. If you use RACE, set this to true.\n# The G nucleotides are assumed to be in the 5' end (but after the barcode if it exists).\n#\nrace_g: false\n\n\n## Primer-related settings\n\n# If set to true, it is assumed that the forward primer is always at the 5' end\n# of the first read and that the reverse primer is always at the 5' end of the\n# second read. If it can also be the other way, set this to false.\n# This setting has no effect if no primer sequences are defined below.\n#\nstranded: false\n\n# List of 5' primers\n#\nforward_primers:\n# - AGCTACAGAGTCCCAGGTCCA\n# - ACAGGYGCCCACTCYSAG\n# - TTGCTMTTTTAARAGGTGTCCAGTGTG\n# - CTCCCAGATGGGTCCTGTC\n# - ACCGTCCYGGGTCTTGTC\n# - CTGTTCTCCAAGGGWGTCTSTG\n# - CATGGGGTGTCCTGTCACA\n\n\n# List of 3' primers\n#\nreverse_primers:\n# - GCAGGCCTTTTTGGCCNNNNNGCCGATGGGCCCTTGGTGGAGGCTGA\u00a0 # IgG\n# - GCAGGCCTTTTTGGCCNNNNNGGGGCATTCTCACAGGAGACGAGGGGGAAAAG\u00a0 # IgM\n\n\n# Work only on this number of reads (for quick test runs). Set to false to\n# process all reads.\n#\n#limit: false\n\n\n# Filter out merged reads that are shorter than this length.\n#\nminimum_merged_read_length: 300\n\n\n# Read merging program. Choose either 'pear' or 'flash'.\n# pear merges more reads, but is slower.\n#\n#merge_program: pear\n\n\n# Maximum overlap (-M) for the flash read merger.\n# If you use pear, this is ignored.\n#\nflash_maximum_overlap: 300\n\n\n# Do not mention the original FASTA or FASTQ sequence names in the\n# assigned.tab files, but instead use names <analysis_directory_name>_seq<number>,\n# where <number> is a running number starting at 1.\n#\u00a0 true: yes, rename\n#\u00a0 false: no, do not rename\n#\nrename: true\n\n\n# Whether debugging is enabled or not. Currently, if this is set to true,\n# some large intermediate files that would otherwise be deleted will be\n# kept.\n#\ndebug: false\n\n\n# The \"seed value\" is in arbitrary number used to get reproducible\n# runs. Two runs that use the same software version, the same seed\n# and otherwise the same configuration will give identical results.\n#\n# Set this to false in order to use a different seed each run.\n# The results will then be not exactly reproducible.\n#\nseed: 1\n\n\n# The preprocessing filter is always applied directly after running IgBLAST,\n# even if no gene discovery is requested.\n#\npreprocessing_filter:\n\u00a0 v_coverage: 90 \u00a0 # Match must cover V gene by at least this percentage\n\u00a0 j_coverage: 60 \u00a0 # Match must cover J gene by at least this percentage\n\u00a0 v_evalue: 0.001\u00a0 # Highest allowed V gene match E-value\n\n\n## Candidate discovery settings\n\n# When discovering new V genes, ignore whether a J gene has been assigned\n# and also ignore its %SHM.\n#\u00a0 true: yes, ignore the J\n#\u00a0 false: do not ignore J assignment, do not ignore its %SHM\n#\nignore_j: false\n\n\n# When clustering sequences to discover new genes, subsample to this number of\n# sequences. Higher is slower.\n#\nsubsample: 1000\n\n\n# When computing the Ds_exact column, consider only D hits that\n# cover the reference D gene sequence by at least this percentage.\n#\nd_coverage: 70\n\n\n## V candidate filtering (germline filtering) settings\n\n\n# Filtering criteria applied to candidate sequences in all iterations except the last.\n#\npre_germline_filter:\n\u00a0 unique_cdr3s: 2\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Minimum number of unique CDR3s (within exact matches)\n\u00a0 unique_js: 2 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Minimum number of unique J genes (within exact matches)\n\u00a0 whitelist: true\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Add database sequences to the whitelist\n\u00a0 cluster_size: 0\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Minimum number of sequences assigned to cluster\n\u00a0 differences: 0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Merge sequences if they have at most this number of differences\n\u00a0 allow_stop: true \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Whether to allow non-productive sequences containing stop codons\n\u00a0 cross_mapping_ratio: 0.02\u00a0 # Threshold for removal of cross-mapping artifacts (set to 0 to disable)\n\u00a0 clonotype_ratio: 0.12\u00a0 \u00a0 \u00a0 # Required minimum ratio of clonotype counts between alleles of the same gene\n\u00a0 exact_ratio: 0.12\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Required minimum ratio of \"exact\" counts between alleles of the same gene\n\u00a0 unique_d_ratio: 0.3\u00a0 \u00a0 \u00a0 \u00a0 # Minimum Ds_exact ratio between alleles\n\u00a0 unique_d_threshold: 10 \u00a0 \u00a0 # Check Ds_exact ratio only if highest-expressed allele has at least this Ds_exact count\n\n\n# Filtering criteria applied to candidate sequences in the last iteration.\n# These should be more strict than the pre_germline_filter criteria.\n#\ngermline_filter:\n\u00a0 unique_cdr3s: 5\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Minimum number of unique CDR3s (within exact matches)\n\u00a0 unique_js: 3 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Minimum number of unique J genes (within exact matches)\n\u00a0 whitelist: true\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Add database sequences to the whitelist\n\u00a0 cluster_size: 100\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Minimum number of sequences assigned to cluster\n\u00a0 differences: 0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Merge sequences if they have at most this number of differences\n\u00a0 allow_stop: false\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Whether to allow non-productive sequences containing stop codons\n\u00a0 cross_mapping_ratio: 0.02\u00a0 # Threshold for removal of cross-mapping artifacts (set to 0 to disable)\n\u00a0 clonotype_ratio: 0.12\u00a0 \u00a0 \u00a0 # Required minimum ratio of clonotype counts between alleles of the same gene\n\u00a0 exact_ratio: 0.12\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Required minimum ratio of \"exact\" counts between alleles of the same gene\n\u00a0 unique_d_ratio: 0.3\u00a0 \u00a0 \u00a0 \u00a0 # Minimum Ds_exact ratio between alleles\n\u00a0 unique_d_threshold: 10 \u00a0 \u00a0 # Check Ds_exact ratio only if highest-expressed allele has at least this Ds_exact count\n\n\n## J discovery settings\n\nj_discovery:\n\u00a0 allele_ratio: 0.2 \u00a0 \u00a0 \u00a0 \u00a0 # Required minimum ratio between alleles of a single gene\n\u00a0 cross_mapping_ratio: 0.1\u00a0 # Threshold for removal of cross-mapping artifacts.\n\u00a0 propagate: true \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 # Use J genes discovered in iteration 1 in subsequent ones\n"
+            }
         },
         "file_url": "submissions/iarc_submission_1.xlsx",
         "sup_url": "submissions/iarc_submission_1_supplementary.docx",
@@ -1411,8 +1373,7 @@
             "read_length",
             "forward_primer_set",
             "reverse_primer_set",
-            "notes",
-            "IARC_repertoire_id"
+            "notes"
         ],
         "Inference_head": [
             "sequence_id",
@@ -1441,7 +1402,6 @@
         ],
         "Genotype_head": [
             "sequence_id",
-            "subject_id",
             "sequences",
             "closest_reference",
             "closest_host",
@@ -1459,6 +1419,9 @@
             "haplotyping_locus",
             "haplotyping_ratio",
             "nt_sequence"
+        ],
+        "Tool_Settings_list": [
+            "IgDiscover"
         ],
         "Tool_Settings_order": [
             "tool_name",

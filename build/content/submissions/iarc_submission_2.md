@@ -41,8 +41,7 @@
             "read_length": "325 (read 1) + 300 (read 2)",
             "forward_primer_set": "sample-indexed Illumina P7C7 primer",
             "reverse_primer_set": "primers targeting the IGHA, IGHD, IGHE, IGHG, IGHM, IGKC and IGLC regions",
-            "notes": "Inferrences were performed on sequences from all samples of subject IB (SRR4431764-73)  in study PRJNA349143. Each sample were processed separately using pRESTO 0.5.4, and sequences containing AGGGAGTGCATCC were extracted as IgM seequences. The IgM sequences of each sample were collected into one fasta file, which subsequently was use to perform IgDiscover analysis.",
-            "IARC_repertoire_id": " "
+            "notes": "Inferrences were performed on sequences from all samples of subject IB (SRR4431764-73)  in study PRJNA349143. Each sample were processed separately using pRESTO 0.5.4, and sequences containing AGGGAGTGCATCC were extracted as IgM seequences. The IgM sequences of each sample were collected into one fasta file, which subsequently was use to perform IgDiscover analysis."
         },
         "Inferences": {
             "Sub_1_Gen_1": [
@@ -105,7 +104,6 @@
             "Sub_1_Gen_1": [
                 {
                     "sequence_id": "IGHV1-18*01",
-                    "subject_id": "IB",
                     "sequences": 6893,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -126,7 +124,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-2*02",
-                    "subject_id": "IB",
                     "sequences": 8218,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -147,7 +144,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-2*04",
-                    "subject_id": "IB",
                     "sequences": 1959,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -168,7 +164,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-24*01",
-                    "subject_id": "IB",
                     "sequences": 2548,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -189,7 +184,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-3*01",
-                    "subject_id": "IB",
                     "sequences": 2147,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -210,7 +204,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-45*02",
-                    "subject_id": "IB",
                     "sequences": 22,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -231,7 +224,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-46*01",
-                    "subject_id": "IB",
                     "sequences": 4270,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -252,7 +244,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-58*02",
-                    "subject_id": "IB",
                     "sequences": 666,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -273,7 +264,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-69*01",
-                    "subject_id": "IB",
                     "sequences": 9476,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -294,7 +284,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-69*02",
-                    "subject_id": "IB",
                     "sequences": 3896,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -315,7 +304,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-69*06",
-                    "subject_id": "IB",
                     "sequences": 6408,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -336,7 +324,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-69-2*01",
-                    "subject_id": "IB",
                     "sequences": 465,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -357,7 +344,6 @@
                 },
                 {
                     "sequence_id": "IGHV1-8*01",
-                    "subject_id": "IB",
                     "sequences": 5184,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -378,7 +364,6 @@
                 },
                 {
                     "sequence_id": "IGHV2-26*01",
-                    "subject_id": "IB",
                     "sequences": 3183,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -399,7 +384,6 @@
                 },
                 {
                     "sequence_id": "IGHV2-5*01",
-                    "subject_id": "IB",
                     "sequences": 2570,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -420,7 +404,6 @@
                 },
                 {
                     "sequence_id": "IGHV2-5*02",
-                    "subject_id": "IB",
                     "sequences": 3252,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -441,7 +424,6 @@
                 },
                 {
                     "sequence_id": "IGHV2-70*01",
-                    "subject_id": "IB",
                     "sequences": 376,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -462,7 +444,6 @@
                 },
                 {
                     "sequence_id": "IGHV2-70D*04",
-                    "subject_id": "IB",
                     "sequences": 264,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -483,7 +464,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-11*01",
-                    "subject_id": "IB",
                     "sequences": 2718,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -504,7 +484,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-11*05",
-                    "subject_id": "IB",
                     "sequences": 2514,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -525,7 +504,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-13*01",
-                    "subject_id": "IB",
                     "sequences": 879,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -546,7 +524,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-13*04",
-                    "subject_id": "IB",
                     "sequences": 1124,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -567,7 +544,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-15*01",
-                    "subject_id": "IB",
                     "sequences": 7714,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -588,7 +564,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-20*01",
-                    "subject_id": "IB",
                     "sequences": 761,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -609,7 +584,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-21*01",
-                    "subject_id": "IB",
                     "sequences": 13697,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -630,7 +604,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-23*01",
-                    "subject_id": "IB",
                     "sequences": 39006,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -651,7 +624,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-30*18",
-                    "subject_id": "IB",
                     "sequences": 9552,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -672,7 +644,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-33*01",
-                    "subject_id": "IB",
                     "sequences": 15659,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -693,7 +664,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-43*01",
-                    "subject_id": "IB",
                     "sequences": 393,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -714,7 +684,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-48*02",
-                    "subject_id": "IB",
                     "sequences": 4692,
                     "closest_reference": null,
                     "closest_host": null,
@@ -735,7 +704,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-48*03",
-                    "subject_id": "IB",
                     "sequences": 7506,
                     "closest_reference": null,
                     "closest_host": null,
@@ -756,7 +724,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-49*03",
-                    "subject_id": "IB",
                     "sequences": 1651,
                     "closest_reference": null,
                     "closest_host": null,
@@ -777,7 +744,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-49*04",
-                    "subject_id": "IB",
                     "sequences": 1765,
                     "closest_reference": null,
                     "closest_host": null,
@@ -798,7 +764,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-53*02",
-                    "subject_id": "IB",
                     "sequences": 1435,
                     "closest_reference": null,
                     "closest_host": null,
@@ -819,7 +784,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-53*04",
-                    "subject_id": "IB",
                     "sequences": 1411,
                     "closest_reference": null,
                     "closest_host": null,
@@ -840,7 +804,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-64*01",
-                    "subject_id": "IB",
                     "sequences": 1102,
                     "closest_reference": null,
                     "closest_host": null,
@@ -861,7 +824,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-64D*06",
-                    "subject_id": "IB",
                     "sequences": 1535,
                     "closest_reference": null,
                     "closest_host": null,
@@ -882,7 +844,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-66*02",
-                    "subject_id": "IB",
                     "sequences": 2450,
                     "closest_reference": null,
                     "closest_host": null,
@@ -903,7 +864,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-7*01",
-                    "subject_id": "IB",
                     "sequences": 4081,
                     "closest_reference": null,
                     "closest_host": null,
@@ -924,7 +884,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-72*01",
-                    "subject_id": "IB",
                     "sequences": 668,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -945,7 +904,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-73*01",
-                    "subject_id": "IB",
                     "sequences": 828,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -966,7 +924,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-73*02",
-                    "subject_id": "IB",
                     "sequences": 1046,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -987,7 +944,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-74*01",
-                    "subject_id": "IB",
                     "sequences": 5787,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1008,7 +964,6 @@
                 },
                 {
                     "sequence_id": "IGHV3-9*01",
-                    "subject_id": "IB",
                     "sequences": 6033,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1029,7 +984,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-28*01",
-                    "subject_id": "IB",
                     "sequences": 24,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1050,7 +1004,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-31*03",
-                    "subject_id": "IB",
                     "sequences": 7426,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1071,7 +1024,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-34*01",
-                    "subject_id": "IB",
                     "sequences": 22622,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1092,7 +1044,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-38-2*01",
-                    "subject_id": "IB",
                     "sequences": 4222,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1113,7 +1064,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-39*01",
-                    "subject_id": "IB",
                     "sequences": 12319,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1134,7 +1084,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-4*02",
-                    "subject_id": "IB",
                     "sequences": 2296,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1155,7 +1104,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-4*07",
-                    "subject_id": "IB",
                     "sequences": 2833,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1176,7 +1124,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-59*01",
-                    "subject_id": "IB",
                     "sequences": 8247,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1197,7 +1144,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-59*08",
-                    "subject_id": "IB",
                     "sequences": 3595,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1218,7 +1164,6 @@
                 },
                 {
                     "sequence_id": "IGHV4-61*02",
-                    "subject_id": "IB",
                     "sequences": 7634,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1239,7 +1184,6 @@
                 },
                 {
                     "sequence_id": "IGHV5-10-1*01",
-                    "subject_id": "IB",
                     "sequences": 1669,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1260,7 +1204,6 @@
                 },
                 {
                     "sequence_id": "IGHV5-51*01",
-                    "subject_id": "IB",
                     "sequences": 3206,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1281,7 +1224,6 @@
                 },
                 {
                     "sequence_id": "IGHV5-51*03",
-                    "subject_id": "IB",
                     "sequences": 1843,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1302,7 +1244,6 @@
                 },
                 {
                     "sequence_id": "IGHV6-1*01",
-                    "subject_id": "IB",
                     "sequences": 2135,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1323,7 +1264,6 @@
                 },
                 {
                     "sequence_id": "IGHV7-4-1*01",
-                    "subject_id": "IB",
                     "sequences": 49,
                     "closest_reference": " ",
                     "closest_host": " ",
@@ -1341,6 +1281,26 @@
                     "haplotyping_locus": "Haplotyping not possible",
                     "haplotyping_ratio": " ",
                     "nt_sequence": "CAGGTGCAGCTGGTGCAATCTGGGTCTGAGTTGAAGAAGCCTGGGGCCTCAGTGAAGGTTTCCTGCAAGGCTTCTGGATACACCTTCACTAGCTATGCTATGAATTGGGTGCGACAGGCCCCTGGACAAGGGCTTGAGTGGATGGGATGGATCAACACCAACACTGGGAACCCAACGTATGCCCAGGGCTTCACAGGACGGTTTGTCTTCTCCTTGGACACCTCTGTCAGCACGGCATATCTGCAGATCTGCAGCCTAAAGGCTGAGGACACTGCCGTGTATTACTGTGCGAGA"
+                },
+                {
+                    "sequence_id": "'Reference genes and alleles' - this is the set of genes and\nalleles provided to the inference tool.",
+                    "sequences": null,
+                    "closest_reference": null,
+                    "closest_host": null,
+                    "nt_diff": null,
+                    "nt_substitutions": null,
+                    "aa_diff": null,
+                    "aa_substitutions": null,
+                    "unmutated_frequency": null,
+                    "unmutated_sequences": null,
+                    "unmutated_umis": null,
+                    "allelic_percentage": null,
+                    "unique_ds": null,
+                    "unique_js": null,
+                    "unique_cdr3s": null,
+                    "haplotyping_locus": null,
+                    "haplotyping_ratio": null,
+                    "nt_sequence": null
                 }
             ]
         },
@@ -1348,10 +1308,12 @@
             "Sub_1_Gen_1"
         ],
         "Tool_Settings": {
-            "tool_name": "IgDiscover",
-            "tool_version": 0.9,
-            "starting_database": "IMGT (onbtained March 2018)  with modifications (see below)",
-            "tool_settings": "See settings tab"
+            "IgDiscover": {
+                "tool_name": "IgDiscover",
+                "tool_version": 0.9,
+                "starting_database": "IMGT (onbtained March 2018)  with modifications (see below)",
+                "tool_settings": "See settings tab"
+            }
         },
         "file_url": "submissions/iarc_submission_2.xlsx",
         "sup_url": "",
@@ -1381,8 +1343,7 @@
             "read_length",
             "forward_primer_set",
             "reverse_primer_set",
-            "notes",
-            "IARC_repertoire_id"
+            "notes"
         ],
         "Inference_head": [
             "sequence_id",
@@ -1411,7 +1372,6 @@
         ],
         "Genotype_head": [
             "sequence_id",
-            "subject_id",
             "sequences",
             "closest_reference",
             "closest_host",
@@ -1429,6 +1389,9 @@
             "haplotyping_locus",
             "haplotyping_ratio",
             "nt_sequence"
+        ],
+        "Tool_Settings_list": [
+            "IgDiscover"
         ],
         "Tool_Settings_order": [
             "tool_name",

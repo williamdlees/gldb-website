@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>News on AIRR Inferred Germline Database</title>
+    <link>https://williamdlees.github.io/gldb-website/posts/</link>
+    <description>Recent content in News on AIRR Inferred Germline Database</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright (c) 2018, AIRR Community; All rights reserved.</copyright>
+    <lastBuildDate>Fri, 18 May 2018 09:50:50 +0100</lastBuildDate>
+    
+	<atom:link href="https://williamdlees.github.io/gldb-website/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Demonstration website</title>
+      <link>https://williamdlees.github.io/gldb-website/posts/post-1/</link>
+      <pubDate>Fri, 18 May 2018 09:50:50 +0100</pubDate>
+      
+      <guid>https://williamdlees.github.io/gldb-website/posts/post-1/</guid>
+      <description>The website contains dummy data at the moment, so that you can get an idea of functionality. It does not reflect IARC&amp;rsquo;s work or decisions!</description>
+    </item>
+    
+  </channel>
+</rss>

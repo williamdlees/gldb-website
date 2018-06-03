@@ -106,19 +106,23 @@
                 </div>
                 <div role="tabpanel" class="tab-pane" id="settings">
                     <h4>Tool Settings</h4>
-                    <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Field</th>
-                        <th scope="col">Value</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        {{ $data :=.Params.content.Tool_Settings }}
-                        {{ range $element := .Params.content.Tool_Settings_order }}
-                        <tr><td>{{ $element }}</td><td>{{ index $data $element }}</td></tr>
-                        {{ end }}
-                    </tbody></table>			
+                    {{ $data := .Params.content }}
+                    {{ range $table := .Params.content.Tool_Settings_list }}
+                        <h4>{{ $table }}
+                        <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Field</th>
+                            <th scope="col">Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {{ $tdata := index $data.Tool_Settings (lower $table) }}
+                            {{ range $element := $data.Tool_Settings_order }}
+                            <tr><td>{{ $element }}</td><td>{{ index $tdata $element }}</td></tr>
+                            {{ end }}
+                        </tbody></table>			
+                    {{ end }}
                 </div>
                 <div role="tabpanel" class="tab-pane" id="acknowledgements">
                     <h4>Acknowledgements</h4>
