@@ -107,8 +107,19 @@ def create_submissions_content():
             data['Inference_head'] = list(data['Inferences'][first][0].keys())
             first = data['Genotype_list'][0]
             data['Genotype_head'] = list(data['Genotype'][first][0].keys())
-            data['Tool_Settings_order'] = list(data['Tool_Settings'].keys())
-
+            tool_settings = OrderedDict()
+            data['Tool_Settings_list'] = []
+            uid = 1
+            for settings in data['Tool_Settings']:
+                key = settings['tool_name']
+                if len(key) < 1 or key in tool_settings:        # make sure we have a unique key for each set of settings
+                    key = '%s_%d' % (key, uid) if len(key) > 1 else 'tool_%d' % uid
+                    uid += 1
+                tool_settings[key] = settings
+                data['Tool_Settings_list'].append(key)
+                if 'Tool_Settings_order' not in data:
+                    data['Tool_Settings_order'] = list(tool_settings[key].keys())
+            data['Tool_Settings'] = tool_settings
 
             fo.write(json.dumps({'date': rec['date'], 'content': data}, indent=4, sort_keys=False, default=str))
 
@@ -313,8 +324,11 @@ def extract_data_from_submissions():
                 sup_url = ""   # zip if more than one file
 
             sub_data = extract_data_from_sub(base + '/submissions/' + sub)
-            submission_details[sub_data['Submission']['submission_id']] = {'url': 'submissions/%s' % targname, 'sup_url': sup_url, 'date': sub_data['Submission']['submission_date'], 'filename': targname, 'data': sub_data}
-            shutil.copyfile(base + '/submissions/' + sub, static + '/submissions/' + targname)
+            if sub_data['Submission']['submission_id'] in submission_details:
+                print('Error: file %s has duplicate submission id %s. File omitted from build.' % (sub, sub_data['Submission']['submission_id']))
+            else:
+                submission_details[sub_data['Submission']['submission_id']] = {'url': 'submissions/%s' % targname, 'sup_url': sup_url, 'date': sub_data['Submission']['submission_date'], 'filename': targname, 'data': sub_data}
+                shutil.copyfile(base + '/submissions/' + sub, static + '/submissions/' + targname)
 
 def extract_data_from_sequences():
     global sequence_details
@@ -354,7 +368,7 @@ def extract_data_from_sub(filename):
     data['Inference_list'] = list(data['Inferences'].keys())
     data['Genotype'] = extract_horiz_table(wb, 'Genotype', 'sequence_id', filename)
     data['Genotype_list'] = list(data['Genotype'].keys())
-    data['Tool_Settings'] = extract_vert_table(wb, 'Tool Settings', 'Field', 'Response', filename)
+    data['Tool_Settings'] = extract_vert_tables(wb, 'Tool Settings', 'Field', 'Response', filename)
 
     return data
 
@@ -364,7 +378,6 @@ def extract_data_from_seq(filename, minute_details):
     data = {}
     data['Sequence'] = extract_vert_table(wb, 'Sequence', 'Field', 'Response', filename)
     data['Acknowledgements'] = extract_horiz_table(wb, 'Sequence', 'name', filename)
-#    data['Delineation'] = extract_vert_tables(wb, 'Delineation', 'Field', 'Response', filename)
     data['Submissions'] = extract_vert_table(wb, 'Submissions', 'Submission ID', 'Sequence ID', filename)
     data['Meetings'] = extract_list(wb, 'Meetings', 'Meeting Number', filename)
     return data
@@ -395,7 +408,7 @@ def extract_vert_table(wb, tabname, keyname, respname, filename):
                 break
             else:
                 res[cell.value] = ws.cell(row=cell.row, column=resp_col).value
-        elif cell.value != None and keyname in cell.value:
+        elif cell.value != None and keyname == cell.value and cell.font.b:
             for rcell in ws[cell.row]:
                 if rcell.value != None and respname in rcell.value:
                     resp_col = column_index_from_string(rcell.column)
@@ -410,10 +423,10 @@ def extract_vert_table(wb, tabname, keyname, respname, filename):
 
 # Extract multiple vertical tables from the named tab
 # Tables are assumed to start in column B
-# The table name should immediately precede the table
 # Keys to the table run down the first column
 # 'keyname' is the topmost key in the column
-# desired responses are in the column whose topmost key is 'respname'
+# all tables must have the same keyname
+#  desired responses are in the column whose topmost key is 'respname'
 # result is a set of dictionaries of key:response pairs
 # filename is used for printing errors only
 def extract_vert_tables(wb, tabname, keyname, respname, filename):
@@ -422,23 +435,22 @@ def extract_vert_tables(wb, tabname, keyname, respname, filename):
         return {}
 
     ws = wb[tabname]
-    res = OrderedDict()
+    res = []
     table = None
     resp_col = None
     recording = False
-    header = None
 
     for cell in ws['B']:
         if recording:
             if cell.value == None:
-                res[header] = table
+                res.append(table)
                 table = None
                 header = None
                 recording = False
             else:
                 table[cell.value] = ws.cell(row=cell.row, column=resp_col).value
         elif cell.value != None:
-            if (header != None) and (keyname in cell.value):
+            if keyname == cell.value and cell.font.b:
                 for rcell in ws[cell.row]:
                     if rcell.value != None and respname in rcell.value:
                         resp_col = column_index_from_string(rcell.column)
@@ -450,7 +462,7 @@ def extract_vert_tables(wb, tabname, keyname, respname, filename):
                 header = cell.value
 
     if recording:
-        res[header] = table
+        res.append(table)
 
     if len(res) < 1:
         print("Could not find table(s) with keyname %s and response name %s on tab %s of workbook %s" % (keyname, respname, tabname, filename))
@@ -477,7 +489,7 @@ def extract_list(wb, tabname, keyname, filename):
                 break
             else:
                 res.append(cell.value)
-        elif cell.value != None and keyname in cell.value:
+        elif cell.value != None and keyname == cell.value and cell.font.b:
             recording = True
 
     if len(res) < 1:
@@ -490,11 +502,12 @@ def extract_list(wb, tabname, keyname, filename):
 # Tables are assumed to start in column B
 # Keys to the table run along the first row
 # 'keyname' is the leftmost topmost key in the row
-# The table is preceded by the cells 'Subject id' and 'Genotype Id'
+# The table may be  preceded by the cells 'Subject id' and 'Genotype Id'
 # These index, potentially, multiple tables
 # If they are blank, serially ascending numbers will be used
 # result is a set of dictionaries of key:response pairs
 # filename is used for printing errors only
+# if there is no subject id, genotype id, just a single table is returned
 def extract_horiz_table(wb, tabname, keyname, filename):
     if tabname not in wb:
         print('No tab %s in workbook %s' % (tabname, filename))
@@ -504,6 +517,7 @@ def extract_horiz_table(wb, tabname, keyname, filename):
     res = OrderedDict()
     sub_id = None
     gen_id = None
+    tool_name = ''
     sub_ind = itertools.count(1)
     gen_ind = itertools.count(1)
     recording = False
@@ -514,12 +528,16 @@ def extract_horiz_table(wb, tabname, keyname, filename):
             if cell is None or cell.value is None or len(cell.value) == 0 or len(cell.value.replace(" ", '')) == 0:
                 if len(table) > 0:
                     if sub_id and gen_id:
-                        res['Sub_%s_Gen_%s' % (str(sub_id), str(gen_id))] = table
+                        if tool_name != '':
+                            res['Sub_%s_Gen_%s_Tool_%s' % (str(sub_id), str(gen_id), tool_name)] = table
+                        else:
+                            res['Sub_%s_Gen_%s' % (str(sub_id), str(gen_id))] = table
                     else:
                         res = table
                 table = None
                 sub_id = None
                 gen_id = None
+                tool_name = ''
                 keys = []
                 recording = False
             else:
@@ -538,7 +556,10 @@ def extract_horiz_table(wb, tabname, keyname, filename):
         elif cell.value != None and 'genotype id' in cell.value.lower():
             val = get_value_to_right(ws, cell)
             gen_id = val if val != None else next(gen_ind)
-        elif cell.value != None and keyname in cell.value:
+        elif cell.value != None and 'tool used' in cell.value.lower():
+            val = get_value_to_right(ws, cell)
+            tool_name = val if val != None else ''
+        elif cell.value != None and keyname == cell.value and cell.font.b:
             keys = []
             for rcell in ws[cell.row]:
                 if column_index_from_string(rcell.column) >= column_index_from_string(cell.column):
@@ -549,9 +570,20 @@ def extract_horiz_table(wb, tabname, keyname, filename):
         else:
             sub_id = None
             gen_id = None
+            tool_name = ''
 
     if len(res) < 1:
         print("Could not find a table with keyname %s on tab %s of workbook %s" % (keyname, tabname, filename))
+
+    if recording:
+        if len(table) > 0:
+            if sub_id and gen_id:
+                if tool_name != '':
+                    res['Sub_%s_Gen_%s_Tool_%s' % (str(sub_id), str(gen_id), tool_name)] = table
+                else:
+                    res['Sub_%s_Gen_%s' % (str(sub_id), str(gen_id))] = table
+            else:
+                res = table
 
     return res
 
